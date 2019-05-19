@@ -15,6 +15,8 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';   // 01.import
 import { AngularFireModule } from "angularfire2";
 import { environment } from "../environments/environment";
 import { AngularFirestoreModule } from "angularfire2/firestore";
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,7 +27,9 @@ import { AngularFirestoreModule } from "angularfire2/firestore";
     AppRoutingModule,
     // FIREBASE
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule
   ],
   providers: [
     StatusBar,

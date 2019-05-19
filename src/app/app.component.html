@@ -24,6 +24,12 @@
         </ion-list>
       </ion-content>
 
+      <ul>
+        <li class="text" *ngFor="let item of items | async">
+          {{item.name}}
+        </li>
+      </ul>
+
     </ion-menu>
     <ion-router-outlet main></ion-router-outlet>
   </ion-split-pane>
